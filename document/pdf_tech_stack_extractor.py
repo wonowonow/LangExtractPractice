@@ -35,7 +35,7 @@ def extract_tech_stack_from_text(text):
         프로그래밍 언어, 프레임워크, 데이터베이스, 도구, 클라우드 서비스 등을 포함합니다.
         정확한 기술명을 사용하고 중복을 피하세요.
         각 기술에 대해 숙련도나 경험 수준을 추정해서 속성으로 제공하세요.
-        숙련도를 확인 할 수 없는 경우 "알 수 없음"으로 표시하세요.
+        숙련도를 확인 할 수 없는 경우 "알 수 없음"으로, 확인할 수 있는 경우 고급 중급 초급으로 표시하고, 숙련도 판단 근거를 적으세요.
         """)
     
     # 기술스택 추출을 위한 예제 데이터
@@ -46,32 +46,32 @@ def extract_tech_stack_from_text(text):
                 lx.data.Extraction(
                     extraction_class="프로그래밍 언어",
                     extraction_text="Java",
-                    attributes={"경험년수": "5년", "숙련도": "고급", "카테고리": "백엔드"}
+                    attributes={"경험년수": "5년", "숙련도": "고급", "카테고리": "백엔드", "숙련도 판단 근거": "쓰레드 관리, JVM 이해 등 고급 기능 사용 경험 있음"}
                 ),
                 lx.data.Extraction(
                     extraction_class="프레임워크",
                     extraction_text="Spring Boot",
-                    attributes={"분야": "백엔드", "숙련도": "고급", "카테고리": "웹 프레임워크"}
+                    attributes={"분야": "백엔드", "숙련도": "고급", "카테고리": "웹 프레임워크", "숙련도 판단 근거": "REST API 설계 및 마이크로서비스 아키텍처 경험 있음"}
                 ),
                 lx.data.Extraction(
                     extraction_class="데이터베이스",
                     extraction_text="MySQL",
-                    attributes={"유형": "관계형", "숙련도": "중급", "활용영역": "설계 및 최적화"}
+                    attributes={"유형": "관계형", "숙련도": "중급", "활용영역": "설계 및 최적화", "숙련도 판단 근거": "인덱스 최적화 및 쿼리 튜닝 경험 있음"}
                 ),
                 lx.data.Extraction(
                     extraction_class="클라우드 서비스",
                     extraction_text="AWS EC2",
-                    attributes={"제공업체": "AWS", "서비스유형": "컴퓨팅", "숙련도": "중급"}
+                    attributes={"제공업체": "AWS", "서비스유형": "컴퓨팅", "숙련도": "중급", "숙련도 판단 근거": "서버 배포 및 관리 경험 있음"}
                 ),
                 lx.data.Extraction(
                     extraction_class="클라우드 서비스",
                     extraction_text="AWS S3",
-                    attributes={"제공업체": "AWS", "서비스유형": "스토리지", "숙련도": "중급"}
+                    attributes={"제공업체": "AWS", "서비스유형": "스토리지", "숙련도": "중급", "숙련도 판단 근거": "파일 저장 및 CDN 활용 경험 있음"}
                 ),
                 lx.data.Extraction(
                     extraction_class="프레임워크",
                     extraction_text="React.js",
-                    attributes={"분야": "프론트엔드", "숙련도": "중급", "카테고리": "UI 라이브러리"}
+                    attributes={"분야": "프론트엔드", "숙련도": "중급", "카테고리": "UI 라이브러리", "숙련도 판단 근거": "컴포넌트 기반 개발 및 상태 관리 경험 있음"}
                 ),
             ]
         )
